@@ -24,7 +24,7 @@ import hr.fer.zemris.nasp.elements.Wire;
 
 public abstract class Algorithm {
 
-	public static final long SLEEP_TIMEOUT = 100;
+	public static final long SLEEP_TIMEOUT = 10;
 	
 	protected Map<String,Node> nodes;
 	protected Map<String, List<Wire>> V;
@@ -77,6 +77,9 @@ public abstract class Algorithm {
 	public abstract void run(Graphics2D g2d);
 
 	public void showResult(Graphics2D g2d) {
+		g2d.setColor(Color.WHITE);
+		g2d.fillRect(0, 0, 2000, 2000);
+		g2d.setColor(Color.BLACK);
 		for(Entry<String,Node> E : nodes.entrySet()) {
 			E.getValue().draw(g2d);
 		}

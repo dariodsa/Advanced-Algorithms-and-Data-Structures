@@ -110,4 +110,9 @@ public class Wire {
 		return ans;
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("%s <----> %s", fromNode.getName(), toNode.getName());
+	}
+	
 }

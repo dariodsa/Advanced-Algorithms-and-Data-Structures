@@ -58,6 +58,7 @@ public class Node {
 	
 	private void draw(Graphics2D g2d, boolean visited) {
 		
+		g2d.setColor(java.awt.Color.BLACK);
 		if(visited) {
 			g2d.setColor(java.awt.Color.YELLOW);
 			g2d.fillOval(x - CIRCLE_RADIUS/2 , y - CIRCLE_RADIUS/2, CIRCLE_RADIUS, CIRCLE_RADIUS);
@@ -68,6 +69,7 @@ public class Node {
 		
 		int fontHeight = g2d.getFontMetrics().getHeight();
 		int textWidth = g2d.getFontMetrics().stringWidth(name);
+		
 		g2d.drawString(name, x - textWidth/2 , y + fontHeight/2);
 	}
 
